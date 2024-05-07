@@ -1,0 +1,50 @@
+// Print odd numbers in an array
+const printOddNumber = arr => {
+    arr.forEach(num => {
+        if (num % 2 !== 0) {
+            console.log(num);
+        }
+    });
+};
+
+
+printOddNumbers([1, 2, 3, 4, 5]);
+
+// Convert all the strings to title caps in a string array
+const titleCap = arr => {
+    return arr.map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase());
+};
+
+
+console.log(titleCaps(["hello", "world", "javascript"]));
+
+// Sum of all numbers in an array
+const sumarray = arr => {
+    return arr.reduce((acc, curr) => acc + curr, 0);
+};
+
+console.log(sumArray([1, 2, 3, 4, 5]));
+
+// Return all the prime numbers in an array
+const isprime = num => {
+    for (let i = 2, sqrt = Math.sqrt(num); i <= sqrt; i++) {
+        if (num % i === 0) return false;
+    }
+    return num > 1;
+};
+
+const primenumbers = arr => arr.filter(num => isPrime(num));
+
+
+console.log(primeNumbers([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]));
+
+// Return all the palindromes in an array
+const ispalindrome = str => {
+    const reversed = str.split("").reverse().join("");
+    return str === reversed;
+};
+
+const palindromearray = arr => arr.filter(str => isPalindrome(str));
+
+
+console.log(palindromeArray(["level", "hello", "racecar", "world"]));
